@@ -371,7 +371,7 @@ public partial class WF_Registrar_Solicitud : System.Web.UI.Page
 
     public DataSet Consultar(string strSQL)
     {
-        string strconn = "Data Source =DESKTOP-BFB6DOQ;Initial Catalog=BD_SWGISC;Integrated Security=True";
+        string strconn = "Data Source =EDUARDO;Initial Catalog=BD_SWGISC;Integrated Security=True";
         SqlConnection con = new SqlConnection(strconn);
         con.Open();
         SqlCommand cmd = new SqlCommand(strSQL, con);

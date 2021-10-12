@@ -67,12 +67,3 @@ D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\GestionDatos\obj\Debug\Gestion
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.dll
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\bin\Debug\GestionDatos.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\bin\Debug\GestionDatos.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\bin\Debug\Dominio.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\bin\Debug\Dominio.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.AssemblyReference.cache
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.CoreCompileInputs.cache
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.csproj.CopyComplete
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\GestionDatos\obj\Debug\GestionDatos.pdb

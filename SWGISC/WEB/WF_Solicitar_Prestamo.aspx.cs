@@ -47,7 +47,6 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            txtimporte.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
             txtcodpatrocinador.Text = Session["dni"].ToString();
 
             soci.IS_Dni = Convert.ToInt32(txtcodpatrocinador.Text);

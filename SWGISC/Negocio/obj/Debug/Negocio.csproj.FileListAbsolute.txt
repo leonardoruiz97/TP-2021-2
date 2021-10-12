@@ -95,14 +95,3 @@ D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.cspr
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\bin\Debug\Negocio.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\bin\Debug\Dominio.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\bin\Debug\GestionDatos.pdb
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.dll
-H:\TP-2021-2\INTEGRADO\SWGISC\Negocio\obj\Debug\Negocio.pdb

@@ -61,7 +61,6 @@
 
                 <ItemStyle CssClass="text-center"></ItemStyle>
             </asp:BoundField>
-        
             <asp:BoundField DataField="VEsol_Estado_Solicitud" HeaderText="Estado" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
                 <HeaderStyle CssClass="text-center"></HeaderStyle>
                 <ItemStyle CssClass="text-center"></ItemStyle>
