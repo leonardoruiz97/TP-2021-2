@@ -23,6 +23,7 @@ public partial class Home : System.Web.UI.MasterPage
     {
         if (!IsPostBack)
         {
+            txtCodPat.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
             txtDni.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
             txtNomCompleto.Attributes.Add("onkeypress", "javascript:return SoloLetrasYEsp(event);");
             txtApa.Attributes.Add("onkeypress", "javascript:return SoloLetrasYEsp(event);");
@@ -76,9 +77,38 @@ public partial class Home : System.Web.UI.MasterPage
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertCodPatrocinadorVacio()", true);
             return;
         }
-      
+        if (txtCodPat.Text.Trim().Length != 8)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "altertPatrocinadorNovalido()", true);
+            return;
+        }
+        if (txtCorreo.Text == "")
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertCorreoVacio()", true);
+            return;
+        }
+        if (IsValidEmail((string)txtCorreo.Text)!=true)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alerta", "alertCorreoIncorrecto()", true);
+            return;
+        }
+
         buscarPatrocinador();
    
+    }
+
+
+    bool IsValidEmail(string email)
+    {
+        try
+        {
+            var addr = new System.Net.Mail.MailAddress(email);
+            return addr.Address == email;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     void bloquearCampos() 
