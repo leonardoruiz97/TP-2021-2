@@ -13,6 +13,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows;
 
+
 public partial class WF_Actualizar_Contraseña : System.Web.UI.Page
 {
         Usuario usu = new Usuario();
@@ -41,7 +42,8 @@ public partial class WF_Actualizar_Contraseña : System.Web.UI.Page
            if(txtContraseña.Text == txtContraseña2.Text)
            {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "ActualizarContraseña()", true);
-            return;
+            Response.Redirect("WF_Iniciar_Sesion.aspx");
+            
            }
         else
         {
