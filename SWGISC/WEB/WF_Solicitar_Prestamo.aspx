@@ -3,6 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="dist/StyleSheet.css" rel="stylesheet" />
     <link href="dist/StyleSheet1.css" rel="stylesheet" />
+	<script type="text/javascript"> 
+	function SoloNumeros(e) {
+            var key_press = document.all ? key_press = e.keyCode : key_press = e.which;
+            return ((key_press > 47 && key_press < 58 || key_press == 110));
+		}
+    </script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -84,7 +90,7 @@
 													<div class="container-select2" style="margin-left:140px">
 														<label class="select2__label">Importe</label> 
 														<br />
-														<asp:TextBox ID="txtimporte" runat="server" class="form-control" Width="90%"></asp:TextBox>
+														<asp:TextBox ID="txtimporte" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="90%"></asp:TextBox>
 													</div>
 												</div>
 												
@@ -400,13 +406,13 @@
 															fijos (mensuales) </label> 
 													
 													
-											      <asp:TextBox ID="txtingresos" runat="server" class="form-control" Width="60%"></asp:TextBox>
+											      <asp:TextBox ID="txtingresos" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="60%"></asp:TextBox>
 												</div>
 												<div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:-120px;margin-top:10px">
 													<label class="mdl-textfield__label" for="MR">Ingresos variables
 															(mensuales) </label>
 														
-													<asp:TextBox ID="txtingresosvariables" runat="server" class="form-control" Width="58%"></asp:TextBox>
+													<asp:TextBox ID="txtingresosvariables" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="58%"></asp:TextBox>
 												</div>
 											</div>
 										
@@ -438,14 +444,14 @@
 															fijos (mensuales) </label> 
 														<%--<img id="tooltip-ingresos-MRC" src="/patpubST/own/img/icons/icono-tooltip-celeste.png" class="iconoTooltip" data-original-title="" title="">--%>
 													
-											      <asp:TextBox ID="TextBox1" runat="server" class="form-control" Width="60%"></asp:TextBox>
+											      <asp:TextBox ID="TextBox1" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="60%"></asp:TextBox>
 												</div>
 
 												<div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:-100px">
 													<label class="mdl-textfield__label" for="MR"> Egresos variables
 															(mensuales) </label>
 														
-													<asp:TextBox ID="TextBox2" runat="server" class="form-control" Width="55%"></asp:TextBox>
+													<asp:TextBox ID="TextBox2" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="55%"></asp:TextBox>
 												</div>
 											</div>
 											

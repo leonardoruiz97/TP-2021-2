@@ -47,7 +47,16 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+ 
             txtcodpatrocinador.Text = Session["dni"].ToString();
+
+            if (PanelPaso1.Visible == true)
+            {
+                txtimporte.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
+                //txtingresos.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
+                //txtingresosvariables.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
+            }
+
 
             soci.IS_Dni = Convert.ToInt32(txtcodpatrocinador.Text);
             Nsoci.consultarSocioPrestamoxdni(soci,sex,ecivil,dis,ocu);
@@ -65,6 +74,8 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
             txtfecharegistro.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
+
+       
        
 
     }
