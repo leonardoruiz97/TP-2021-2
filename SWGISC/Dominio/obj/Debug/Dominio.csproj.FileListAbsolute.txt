@@ -46,3 +46,9 @@ D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Dominio\bin\Debug\Dominio.pdb
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.dll
 D:\Descargas de pc\VERSION 04-08\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.pdb
+H:\TP-2021-2\INTEGRADO\SWGISC\Dominio\bin\Debug\Dominio.dll
+H:\TP-2021-2\INTEGRADO\SWGISC\Dominio\bin\Debug\Dominio.pdb
+H:\TP-2021-2\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+H:\TP-2021-2\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+H:\TP-2021-2\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.dll
+H:\TP-2021-2\INTEGRADO\SWGISC\Dominio\obj\Debug\Dominio.pdb

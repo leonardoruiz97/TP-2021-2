@@ -16,7 +16,7 @@ namespace GestionDatos
         {
             get
             {
-                return "Data Source =EDUARDO;Initial Catalog=BD_SWGISC;Integrated Security=True";
+                return "Data Source =DESKTOP-BFB6DOQ;Initial Catalog=BD_SWGISC;Integrated Security=True";
 
             }
 

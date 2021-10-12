@@ -100,6 +100,7 @@
 
                     <ItemStyle CssClass="text-center"></ItemStyle>
                 </asp:BoundField>
+                
 
 
                 <asp:TemplateField HeaderText="Opciones" ItemStyle-CssClass="text-center" HeaderStyle-CssClass="text-center">
@@ -168,7 +169,8 @@
 
             </Columns>
 
-           <HeaderStyle BackColor="#008080" ForeColor="white" Font-Bold="true" />
+                  <HeaderStyle BackColor="#008080" ForeColor="white" Font-Bold="true" />
+
         </asp:GridView>
         <div class="row align-items-start" style="margin-left: 1px">
             <div class="col">

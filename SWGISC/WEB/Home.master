@@ -449,14 +449,14 @@
 
                                 <div class="form-group">
                                     <asp:TextBox ID="txtCorreo" runat="server" placeholder="Correo Electronico" class="form-control" Width="150%"></asp:TextBox>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtCodPat" runat="server" MaxLength="8" placeholder="Codigo del Patrocinador" class="form-control" Width="150%"></asp:TextBox>
 
                                 </div>
                                 <div class="form-group">
-                                    <asp:TextBox ID="txtCodPat" runat="server" placeholder="Codigo del Patrocinador" class="form-control" Width="150%"></asp:TextBox>
-
-                                </div>
-                                <div class="form-group">
-                                    <asp:TextBox ID="txtPatro" runat="server" placeholder="Patrocinador" class="form-control" Width="150%"></asp:TextBox>
+                                    <asp:TextBox ID="txtPatro" runat="server" placeholder="Patrocinador" MaxLength="8" class="form-control" Width="150%"></asp:TextBox>
 
                                 </div>
                                 <div class="text-center">
@@ -691,11 +691,29 @@
         <!-- Alertas -->
         <script src="js/sweetalert.js"></script>
         <script>
-            function alertDniVacio() {
+            function alertCorreoVacio() {
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
-                    title: 'Ingrese un DNI',
+                    title: 'Ingrese su Correo',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
+            function alertCorreoVacio() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Ingrese su Correo',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }
+            function alertCorreoIncorrecto() {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Correo Incorrecto',
                     showConfirmButton: false,
                     timer: 2000
                 })
