@@ -117,4 +117,9 @@ public partial class WF_Iniciar_Sesion : System.Web.UI.Page
         ValidarIniciarSesion();
      
     }
+    protected void Olvidarcontraseña(object sender, EventArgs e)
+    {
+        Response.Redirect("WF_Olvidar_Contraseña.aspx");
+
+    }
 }

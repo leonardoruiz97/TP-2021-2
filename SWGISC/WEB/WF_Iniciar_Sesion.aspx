@@ -46,7 +46,6 @@
           <label class='checkbox'>
             <input type='checkbox' value='TRUE' title='Keep me Signed in' /> ¿Quieres guardar la contraseña?
           </label>
-
            <asp:Button class="btnIniciar" runat="server" Text="INICIAR SESION" OnClick="Unnamed_Click"></asp:Button>
         	
     </div>
@@ -55,8 +54,9 @@
 					    <p><button onclick="closeLoginInfo();" class='b b-info i i-left' title='Back to Sign In'></button><h3>¿Necesitas Ayuda?</h3>
     </p>
 					    <div class='line-wh'></div>
-    					<button onclick="" class='b-support' title='Forgot Passwor?'> Olvidaste tu Contraseña</button>
-    <button onclick="" class='b-support' title='Contact Support'> Contactate con Soporte</button>
+    					<asp:Button CssClass="b-support" runat="server" Text="Olvidaste tu Contraseña" OnClick="Olvidarcontraseña"></asp:Button>
+                        <button onclick="" class='b-support' title='Forgot Passwor?'> Olvidaste tu Contraseña</button>
+                        <button onclick="" class='b-support' title='Contact Support'> Contactate con Soporte</button>
     					<div class='line-wh'></div>
     <%--<button onclick="" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>--%>
   				</div>
