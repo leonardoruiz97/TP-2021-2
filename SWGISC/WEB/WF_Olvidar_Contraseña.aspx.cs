@@ -21,34 +21,36 @@ public partial class WF_Olvidar_Contraseña : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-
+            panel2.Visible = false;
+          
         }
 
     } 
     void ValidarDNI()
     {
-        if (txtDNI.Text == "")
+        if (txtDNI1.Text == "")
         { 
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "DNIVacio()", true);
             return;
         }
-        usu.IU_Dni = int.Parse(txtDNI.Text);
+        usu.IU_Dni = int.Parse(txtDNI1.Text);
         Nusu.buscarUsuarioDni(usu);
-        txtpkiu.Text = "" + usu.PK_IU_Cod;
-        if (int.Parse(txtpkiu.Text) != 0)
+        txtpkiu1.Text = "" + usu.PK_IU_Cod;
+        if (int.Parse(txtpkiu1.Text) != 0)
         {
-            txtdnibus.Text = "" + usu.IU_Dni;
-            txtcontraseñabus.Text = "" + usu.VU_Contraseña;
-            if (txtDNI.Text == txtdnibus.Text)
+            txtdnibus1.Text = "" + usu.IU_Dni;
+            txtcontraseñabus1.Text = "" + usu.VU_Contraseña;
+            
+            if (txtDNI1.Text == txtdnibus1.Text)
             {
-                Response.Redirect("WF_Actualizar_Contraseña.aspx");
+                changesPanel();
             }
-            else if (txtDNI.Text != txtdnibus.Text)
+            else if (txtDNI1.Text != txtdnibus1.Text)
             {
                 ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "DNIincorrecta()", true);
             }
         }
-        else if (int.Parse(txtpkiu.Text) == 0)
+        else if (int.Parse(txtpkiu1.Text) == 0)
         {
             ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "noexisteUsuario()", true);
             txtDNI.Text = "";
@@ -56,12 +58,44 @@ public partial class WF_Olvidar_Contraseña : System.Web.UI.Page
         }
 
     }
+    void ActualizarContraseña()
+    {
+        if (txtContraseña.Text == "")
+        {
+            ClientScript.RegisterStartupScript(this.Page.GetType(), "alerta", "ContraseñaVacia()", true);
+            return;
+        }
+
+        //txtContraseña.Text = "" + usu.VU_Contraseña;
+        //usu.IU_Dni = int.Parse(txtContraseña.Text);
+        usu.VU_Contraseña = (txtContraseña.Text).ToString();
+        usu.IU_Dni = int.Parse(txtDNI1.Text);
+        Nusu.actualizarContraseña(usu);
+        Response.Write("ContraseñaVacia()");
+        Response.Redirect("WF_Iniciar_Sesion.aspx");
+    }
+
 
 
 
     protected void Unnamed_Click(object sender, EventArgs e)
     {
         ValidarDNI();
+        
+
+    }
+    protected void Actualizar(object sender, EventArgs e)
+    {
+        ActualizarContraseña();
+
+
+    }
+
+    void changesPanel()
+    {
+        panel1.Visible = false;
+        panel2.Visible = true;
+
     }
 
     protected void Retroceder(object sender, EventArgs e)
