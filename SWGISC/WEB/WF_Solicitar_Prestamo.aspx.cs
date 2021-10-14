@@ -52,7 +52,7 @@ public partial class WF_Solicitar_Prestamo : System.Web.UI.Page
 
             if (PanelPaso1.Visible == true)
             {
-                txtimporte.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
+                
                 //txtingresos.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
                 //txtingresosvariables.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event);");
             }

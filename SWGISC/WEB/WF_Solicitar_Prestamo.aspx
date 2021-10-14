@@ -8,6 +8,40 @@
             var key_press = document.all ? key_press = e.keyCode : key_press = e.which;
             return ((key_press > 47 && key_press < 58 || key_press == 110));
 		}
+        function filterFloat(evt, input) {
+            // Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
+            var key = window.Event ? evt.which : evt.keyCode;
+            var chark = String.fromCharCode(key);
+            var tempValue = input.value + chark;
+            if (key >= 48 && key <= 57) {
+                if (filter(tempValue) === false) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                if (key == 8 || key == 13 || key == 0) {
+                    return true;
+                } else if (key == 46) {
+                    if (filter(tempValue) === false) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        }
+        function filter(__val__) {
+            var preg = /^([0-9]+\.?[0-9]{0,2})$/;
+            if (preg.test(__val__) === true) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
     </script>
 </asp:Content>
 
@@ -90,7 +124,7 @@
 													<div class="container-select2" style="margin-left:140px">
 														<label class="select2__label">Importe</label> 
 														<br />
-														<asp:TextBox ID="txtimporte" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="90%"></asp:TextBox>
+														<asp:TextBox ID="txtimporte" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="90%"></asp:TextBox>
 													</div>
 												</div>
 												
@@ -406,13 +440,13 @@
 															fijos (mensuales) </label> 
 													
 													
-											      <asp:TextBox ID="txtingresos" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="60%"></asp:TextBox>
+											      <asp:TextBox ID="txtingresos" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="60%"></asp:TextBox>
 												</div>
 												<div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:-120px;margin-top:10px">
 													<label class="mdl-textfield__label" for="MR">Ingresos variables
 															(mensuales) </label>
 														
-													<asp:TextBox ID="txtingresosvariables" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="58%"></asp:TextBox>
+													<asp:TextBox ID="txtingresosvariables" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="58%"></asp:TextBox>
 												</div>
 											</div>
 										
@@ -444,14 +478,14 @@
 															fijos (mensuales) </label> 
 														<%--<img id="tooltip-ingresos-MRC" src="/patpubST/own/img/icons/icono-tooltip-celeste.png" class="iconoTooltip" data-original-title="" title="">--%>
 													
-											      <asp:TextBox ID="TextBox1" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="60%"></asp:TextBox>
+											      <asp:TextBox ID="TextBox1" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="60%"></asp:TextBox>
 												</div>
 
 												<div class="col-sm-6 col-md-6 espaciosTopBottom" style="margin-left:-100px">
 													<label class="mdl-textfield__label" for="MR"> Egresos variables
 															(mensuales) </label>
 														
-													<asp:TextBox ID="TextBox2" onkeypress="javascript:return SoloNumeros(event)" runat="server" class="form-control" Width="55%"></asp:TextBox>
+													<asp:TextBox ID="TextBox2" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="55%"></asp:TextBox>
 												</div>
 											</div>
 											
@@ -605,7 +639,7 @@
 													<label class="mdl-textfield__label" for="numIngFijoMR"> Banco: </label> 
 														<%--<img id="tooltip-ingresos-MRC" src="/patpubST/own/img/icons/icono-tooltip-celeste.png" class="iconoTooltip" data-original-title="" title="">--%>
 															
-										          <asp:TextBox ID="TextBox5" runat="server" class="form-control" Width="90%"></asp:TextBox>
+										          <asp:TextBox ID="TextBox5" onkeypress="javascript:return filterFloat(event,this)" runat="server" class="form-control" Width="90%"></asp:TextBox>
 													
 												</div>
 
@@ -613,7 +647,7 @@
 													<label class="mdl-textfield__label" for="numIngFijoMR"> Monto total: </label> 
 													<br />
 													
-												<asp:TextBox ID="TextBox3" runat="server" class="form-control" Width="85%"></asp:TextBox>
+												<asp:TextBox ID="TextBox3" onkeypress="javascript:return filterFloat(event,this)" runat="server"  class="form-control" Width="85%"></asp:TextBox>
 													
 												</div>
 											</div>

@@ -260,14 +260,14 @@
                     </div>
                     <div class="form-group">
                         <asp:Label ID="Label14" runat="server" Text="Telefono Fijo"></asp:Label>
-                        <asp:TextBox ID="txtTelfijo" runat="server" class="form-control" Width="85%"></asp:TextBox>
+                        <asp:TextBox ID="txtTelfijo" onkeypress="javascript:return SoloNumeros(event)" MaxLength="7" MinLength="7" runat="server" class="form-control" Width="85%"></asp:TextBox>
                     </div>
                 </div>
 
                 <div class="col-sm-9 col-md-6">
                     <div class="form-group">
                         <asp:Label ID="Label15" runat="server" Text="Celular"></asp:Label>
-                        <asp:TextBox ID="txtCelular" runat="server" class="form-control" Width="85%"></asp:TextBox>
+                        <asp:TextBox ID="txtCelular"  onkeypress="javascript:return SoloNumeros(event)" MaxLength="8" MinLength="8" runat="server" class="form-control" Width="85%"></asp:TextBox>
                     </div>
                     <asp:Label ID="Label4" runat="server" Text="Ocupaciòn"></asp:Label>
                     <asp:DropDownList ID="ddlOcupacion" runat="server" CssClass="form-control" Width="85%">
